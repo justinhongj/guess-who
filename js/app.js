@@ -68,19 +68,25 @@ var player2Array = [];
 $(function() {
 
 
-// attempting to add '.data' to each card to hold the properties of the object whose image is on that card
-	// changes made to html adding spans nested inside each overlay
-	// changes made to '.hover' function to show traits inside each span
+// pushing each character object into respective player arrays
+	// first element in array corresponds to first card, etc.
 	function populate1() {
 		for (var i = 101; i < 126; i++) {
 			var rand = chooseRandomCharacter();
 
 			$('#' + i).css('background-image', 'url(' + rand.location + ')');
 
-			player1Array.push(rand);
+			$('#a' + i).html(rand.name);
+			$('#b' + i).html(rand.sex);
+			$('#c' + i).html(rand.hair);
+			$('#d' + i).html(rand.glasses);
+			$('#e' + i).html(rand.facialHair);
+			$('#f' + i).html(rand.shirt);
+			$('#g' + i).html(rand.outerwear);
+			// player1Array.push(rand);
 		}
 
-		console.log(player1Array);
+		// console.log(player1Array);
 	}
 
 
@@ -91,10 +97,10 @@ $(function() {
 
 			$('#' + x).css('background-image', 'url(' + rand.location + ')');
 
-			player2Array.push(rand);
+			// player2Array.push(rand);
 		}
 
-		console.log(player2Array);
+		// console.log(player2Array);
 	}
 
 	function populate() {

@@ -51,6 +51,11 @@ header {
 	top: 0;
 }
 
+p {
+	color: white;
+	font-size: 0.7em;
+}
+
 #gb2 {
 	display: none;
 }
