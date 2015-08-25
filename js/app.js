@@ -12,31 +12,31 @@ function Character(name, sex, hair, glasses, facialHair, shirt, outerwear, locat
 	this.location = location;
 }
 
-var adam = new Character('Adam West', 'Male', 'Grey Hair', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Adam-West.jpg');
-var beth = new Character('Beth', 'Female', 'Blonde', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Beth.JPG');
-var cyril = new Character('Cyril', 'male', 'Black Hair', 'Glasses', 'No Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Cyril.jpg');
-var grandpa = new Character('Grandpa', 'male', 'Grey Hair', 'No Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'Outerwear', 'images/Grandpa.jpg');
-var krieger = new Character('Dr. Krieger', 'male', 'Brown Hair', 'No Glasses', 'Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Krieger.jpg');
-var linda = new Character('Linda', 'female', 'Black Hair', 'Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'No Outerwear', 'images/Linda.jpg');
-var lois = new Character('Lois', 'female', 'Red Hair', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Lois.jpg');
-var meg = new Character('Meg', 'female', 'Brown Hair', 'Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'No Outerwear', 'images/Meg.jpg');
-var mort = new Character('Mort', 'male', 'Red Hair', 'Glasses', 'No Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Mort.gif');
-var morty = new	Character('Morty', 'male', 'Brown Hair', 'No Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'No Outerwear', 'images/Morty.JPG');
-var pam = new Character('Pam', 'female', 'Blonde', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Pam.jpg');
-var peter = new Character('Peter', 'male', 'Brown Hair', 'Glasses', 'No Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Peter.jpg');
-var ray = new Character('Ray', 'male', 'Blonde', 'No Glasses', 'Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Ray.jpg');
-var ron = new Character('Ron', 'male', 'Red Hair', 'No Glasses', 'Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Ron.jpg');
-var summer = new Character('Summer', 'female', 'Red Hair', 'No Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'No Outerwear', 'images/Summer.JPG');
-var archer = new Character('Archer', 'male', 'Black Hair', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Archer.png');
-var bob = new Character('Bob', 'male', 'Black Hair', 'No Glasses', 'Facial Hair', 'Non-Collared Shirt', 'Outerwear', 'images/Bob.png');
-var fischoeder = new Character('Mr. Fischoeder', 'male', 'Grey Hair', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Fischoeder.png');
-var goldenfold = new Character('Mr. Goldenfold', 'male', 'Black Hair', 'No Glasses', 'Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Goldenfold.png');
-var hugo = new Character('Hugo', 'male', 'Blonde', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Hugo.png');
-var jessica = new Character('Jessica', 'female', 'Red Hair', 'No Glasses', 'No Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Jessica.png');
-var malory = new Character('Malory', 'female', 'Grey Hair', 'No Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'Outerwear', 'images/Malory.png');
-var rick = new Character('Rick', 'male', 'Grey Hair', 'No Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'Outerwear', 'images/Rick.png');
-var steve = new Character('Uncle Steve', 'male', 'Brown Hair', 'No Glasses', 'Facial Hair', 'Collared Shirt', 'No Outerwear', 'images/Steve.png');
-var tina = new Character('Tina', 'female', 'Black Hair', 'Glasses', 'No Facial Hair', 'Non-Collared Shirt', 'No Outerwear', 'images/Tina.png');
+var adam = new Character('Adam West', 'Male', 'Grey Hair', null, null, 'Collared Shirt', 'Outerwear', 'images/Adam-West.jpg');
+var beth = new Character('Beth', 'Female', 'Blonde', null, null, 'Collared Shirt', null, 'images/Beth.JPG');
+var cyril = new Character('Cyril', 'Male', 'Black Hair', 'Glasses', null, 'Collared Shirt', 'Outerwear', 'images/Cyril.jpg');
+var grandpa = new Character('Grandpa', 'Male', 'Grey Hair', null, null, null, 'Outerwear', 'images/Grandpa.jpg');
+var krieger = new Character('Dr. Krieger', 'Male', 'Brown Hair', null, 'Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Krieger.jpg');
+var linda = new Character('Linda', 'Female', 'Black Hair', 'Glasses', null, null, null, 'images/Linda.jpg');
+var lois = new Character('Lois', 'Female', 'Red Hair', null, null, 'Collared Shirt', null, 'images/Lois.jpg');
+var meg = new Character('Meg', 'Female', 'Brown Hair', 'Glasses', null, null, null, 'images/Meg.jpg');
+var mort = new Character('Mort', 'Male', 'Red Hair', 'Glasses', null, 'Collared Shirt', 'Outerwear', 'images/Mort.gif');
+var morty = new	Character('Morty', 'Male', 'Brown Hair', null, null, null, null, 'images/Morty.JPG');
+var pam = new Character('Pam', 'Female', 'Blonde', null, null, 'Collared Shirt', null, 'images/Pam.jpg');
+var peter = new Character('Peter', 'Male', 'Brown Hair', 'Glasses', null, 'Collared Shirt', null, 'images/Peter.jpg');
+var ray = new Character('Ray', 'Male', 'Blonde', null, 'Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Ray.jpg');
+var ron = new Character('Ron', 'Male', 'Red Hair', null, 'Facial Hair', 'Collared Shirt', null, 'images/Ron.jpg');
+var summer = new Character('Summer', 'Female', 'Red Hair', null, null, null, null, 'images/Summer.JPG');
+var archer = new Character('Archer', 'Male', 'Black Hair', null, null, 'Collared Shirt', 'Outerwear', 'images/Archer.png');
+var bob = new Character('Bob', 'Male', 'Black Hair', null, 'Facial Hair', null, 'Outerwear', 'images/Bob.png');
+var fischoeder = new Character('Mr. Fischoeder', 'Male', 'Grey Hair', null, null, 'Collared Shirt', 'Outerwear', 'images/Fischoeder.png');
+var goldenfold = new Character('Mr. Goldenfold', 'Male', 'Black Hair', null, 'Facial Hair', 'Collared Shirt', 'Outerwear', 'images/Goldenfold.png');
+var hugo = new Character('Hugo', 'Male', 'Blonde', null, null, 'Collared Shirt', null, 'images/Hugo.png');
+var jessica = new Character('Jessica', 'Female', 'Red Hair', null, null, 'Collared Shirt', null, 'images/Jessica.png');
+var malory = new Character('Malory', 'Female', 'Grey Hair', null, null, null, 'Outerwear', 'images/Malory.png');
+var rick = new Character('Rick', 'Male', 'Grey Hair', null, null, null, 'Outerwear', 'images/Rick.png');
+var steve = new Character('Uncle Steve', 'Male', 'Brown Hair', null, 'Facial Hair', 'Collared Shirt', null, 'images/Steve.png');
+var tina = new Character('Tina', 'Female', 'Black Hair', 'Glasses', null, null, null, 'images/Tina.png');
 
 var characterArray = [adam, beth, cyril, grandpa, krieger, linda, lois, meg, mort, morty, pam, peter, ray, ron, summer, 
 	archer, bob, fischoeder, goldenfold, hugo, jessica, malory, rick, steve, tina];
@@ -68,8 +68,7 @@ var player2Array = [];
 $(function() {
 
 
-// pushing each character object into respective player arrays
-	// first element in array corresponds to first card, etc.
+
 	function populate1() {
 		for (var i = 101; i < 126; i++) {
 			var rand = chooseRandomCharacter();
@@ -83,10 +82,8 @@ $(function() {
 			$('#e' + i).html(rand.facialHair);
 			$('#f' + i).html(rand.shirt);
 			$('#g' + i).html(rand.outerwear);
-			// player1Array.push(rand);
 		}
 
-		// console.log(player1Array);
 	}
 
 
@@ -97,10 +94,16 @@ $(function() {
 
 			$('#' + x).css('background-image', 'url(' + rand.location + ')');
 
-			// player2Array.push(rand);
+			$('#a' + x).html(rand.name);
+			$('#b' + x).html(rand.sex);
+			$('#c' + x).html(rand.hair);
+			$('#d' + x).html(rand.glasses);
+			$('#e' + x).html(rand.facialHair);
+			$('#f' + x).html(rand.shirt);
+			$('#g' + x).html(rand.outerwear);
+
 		}
 
-		// console.log(player2Array);
 	}
 
 	function populate() {
@@ -144,13 +147,21 @@ $(function() {
 	});
 
 
-	$('.container').hover(function() {
-
+	$('.traits').hover(function(event) {
+		$(event.target).css({
+			'font-weight': 'bold',
+			'font-size': '0.8em'
+		});
 	}, function() {
-
+		$(event.target).css({
+			'font-weight': 'normal',
+			'font-size': '0.7em'
+		});
 	});
 
-		// $(this).find('.name').text( $.data($(this).find('.cards')), "traits").name );
+
+	
+
 });
 
 
