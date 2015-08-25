@@ -62,6 +62,8 @@ function chooseRandomCharacter() {
 
 $(function() {
 
+
+// attempting to add '.data' to each card to hold the properties of the object whose image is on that card
 	function populate1() {
 		for (var i = 101; i < 126; i++) {
 			var rand = chooseRandomCharacter();
