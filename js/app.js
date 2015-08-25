@@ -60,21 +60,36 @@ function chooseRandomCharacter() {
 }
 
 
+var player1Array = [];
+
+var player2Array = [];
+
+
 $(function() {
 
 
 // attempting to add '.data' to each card to hold the properties of the object whose image is on that card
+	// changes made to html adding spans nested inside each overlay
+	// changes made to '.hover' function to show traits inside each span
 	function populate1() {
 		for (var i = 101; i < 126; i++) {
 			var rand = chooseRandomCharacter();
+
 			$('#' + i).css('background-image', 'url(' + rand.location + ')');
+
+			player1Array.push(rand);
 		}
 	}
+
+
 
 	function populate2() {
 		for (var x = 201; x < 226; x++) {
 			var rand = chooseRandomCharacter();
+
 			$('#' + x).css('background-image', 'url(' + rand.location + ')');
+
+			player2Array.push(rand);
 		}
 	}
 
@@ -103,9 +118,7 @@ $(function() {
 			playerOneTurn = false;
 		} else {
 			playerOneTurn = true;
-		}
-		console.log(playerOneTurn);
-		
+		}		
 	}
 
 
@@ -121,6 +134,13 @@ $(function() {
 	});
 
 
+	$('.container').hover(function() {
+
+	}, function() {
+
+	});
+
+		// $(this).find('.name').text( $.data($(this).find('.cards')), "traits").name );
 });
 
 
