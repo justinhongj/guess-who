@@ -1,0 +1,58 @@
+header {
+	text-align: center;
+	height: 70px;
+	width: 100%;
+	background-color: orange;
+}
+
+#scoreboard div {
+	height: 65px;
+	width: 18%;
+	border: 1px solid black;
+	display: inline-block;
+	padding-bottom: 0px;
+}
+
+.gameboard {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.container {
+	display: inline-block;
+	width: 90px;
+	border-radius: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.cards {
+	position: relative;
+	height: 120px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.overlay {
+	background-color: grey;
+	opacity: 0.8;
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	z-index: 1;
+	top: 0;
+}
+
+#gb2 {
+	display: none;
+}
+
+.targets {
+	margin-top: 30px;
+}
