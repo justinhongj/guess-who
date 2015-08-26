@@ -1,5 +1,5 @@
 
-playerOneTurn = true;
+playerOneTurn = null;
 
 function Character(name, sex, hair, glasses, facialHair, shirt, outerwear, location) {
 	this.name = name;
@@ -106,21 +106,7 @@ $(function() {
 
 	}
 
-	function populate() {
-		populate1();
-
-		populate2();
-
-		if (($('.p1target').css('background-image')) == ($('.p2target').css('background-image'))) {
-			populate2();
-		}
-	}
-
-
-	$('#start').click(function(){
-		populate();
-		$('#start').css('display', 'none');
-	});
+	
 
 
 
@@ -186,7 +172,7 @@ $(function() {
 
 	function checkBoard1(e) {
 		var selectedTrait = e.target.innerHTML;
-		
+
 		if ((selectedTrait === $('#b125')[0].innerHTML) || 
 									(selectedTrait === $('#c125')[0].innerHTML) || 
 									(selectedTrait === $('#d125')[0].innerHTML) || 
@@ -222,16 +208,61 @@ $(function() {
 	}
 
 
-	function switchTurn() {
+
+	function populate() {
+		populate1();
+
+		populate2();
+
+		if (($('.p1target').css('background-image')) == ($('.p2target').css('background-image'))) {
+			populate2();
+		}
+	}
+
+
+	$('#start').click(function() {
+		$('#start').css('display', 'none');
+		playerOneTurn = true;
+		$('#player1-plate').toggle();
+		populate();
 		$('#gb1').toggle();
 		$('#gb2').toggle();
+	});
 
+
+	function switchTurn() {
 		if (playerOneTurn === true) {
+			$('#player1-end-plate').toggle();
 			playerOneTurn = false;
 		} else {
+			$('#player2-end-plate').toggle();
 			playerOneTurn = true;
 		}		
 	}
+
+
+	$('#player1-end-plate').click(function() {
+		$('#player2-plate').toggle();
+		$('#player1-end-plate').toggle();
+		$('#gb1').toggle();
+		$('#gb2').toggle();
+	})
+
+	$('#player2-end-plate').click(function() {
+		$('#player1-plate').toggle();
+		$('#player2-end-plate').toggle();
+		$('#gb1').toggle();
+		$('#gb2').toggle();
+	})
+
+
+	$('#player1-plate').click(function() {
+		$('#player1-plate').toggle();
+	});
+
+	$('#player2-plate').click(function() {
+		$('#player2-plate').toggle();
+	});
 
 
 	$('#gb1').find('.traits').click(function() {

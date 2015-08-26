@@ -25,6 +25,47 @@ header {
 	width: 100%;
 	background-color: grey;
 	opacity: 0.9;
+	display: block;
+}
+
+#player1-plate {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: grey;
+	display: none;
+}
+
+#player1-end-plate {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: rgba(80, 80, 80, 0.1);
+	display: none;
+}
+
+#player2-plate {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: grey;
+	display: none;
+}
+
+#player2-end-plate {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: rgba(80, 80, 80, 0.1);
+	display: none;
 }
 
 .gameboard {
@@ -84,7 +125,7 @@ p {
 	font-size: 0.85em;
 }
 
-#gb2 {
+#gb1 {
 	display: none;
 }
 
