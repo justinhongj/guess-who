@@ -1,9 +1,12 @@
+body {
+
+}
 
 header {
 	text-align: center;
 	height: 70px;
 	width: 100%;
-	background-color: orange;
+	background-color: grey;
 }
 
 #scoreboard div {
@@ -12,6 +15,16 @@ header {
 	border: 1px solid black;
 	display: inline-block;
 	padding-bottom: 0px;
+}
+
+#start {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: grey;
+	opacity: 0.9;
 }
 
 .gameboard {

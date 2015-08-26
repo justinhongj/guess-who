@@ -148,6 +148,7 @@ $(function() {
 
 	function checkBoard2(e) {
 		var selectedTrait = e.target.innerHTML;
+
 		if ((selectedTrait === $('#b225')[0].innerHTML) || 
 									(selectedTrait === $('#c225')[0].innerHTML) || 
 									(selectedTrait === $('#d225')[0].innerHTML) || 
@@ -185,6 +186,7 @@ $(function() {
 
 	function checkBoard1(e) {
 		var selectedTrait = e.target.innerHTML;
+		
 		if ((selectedTrait === $('#b125')[0].innerHTML) || 
 									(selectedTrait === $('#c125')[0].innerHTML) || 
 									(selectedTrait === $('#d125')[0].innerHTML) || 
