@@ -20,7 +20,7 @@ header {
 #player1, #score1 {
 	background-color: #0055A2;
 	color: white;
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: bold;
 	font-family: Arial;
 }
@@ -28,7 +28,7 @@ header {
 #player2, #score2 {
 	background-color: #9E2421;
 	color: white;
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: bold;
 	font-family: Arial;
 }
@@ -40,8 +40,12 @@ header {
 	height: 100%;
 	width: 100%;
 	background-color: grey;
-	opacity: 0.9;
+	background: rgba(80, 80, 80, 0.8);
 	display: block;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 5em;
 }
 
 #player1-plate {
@@ -52,6 +56,10 @@ header {
 	width: 100%;
 	background-color: #0055A2;
 	display: none;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 3em;
 }
 
 #player1-end-plate {
@@ -72,6 +80,10 @@ header {
 	width: 100%;
 	background-color: #9E2421;
 	display: none;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 3em;
 }
 
 #player2-end-plate {
