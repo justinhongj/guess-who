@@ -17,6 +17,22 @@ header {
 	padding-bottom: 0px;
 }
 
+#player1, #score1 {
+	background-color: #0055A2;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+#player2, #score2 {
+	background-color: #9E2421;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Arial;
+}
+
 #start {
 	position: absolute;
 	top: 80px;
@@ -34,7 +50,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: grey;
+	background-color: #0055A2;
 	display: none;
 }
 
@@ -54,7 +70,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: grey;
+	background-color: #9E2421;
 	display: none;
 }
 

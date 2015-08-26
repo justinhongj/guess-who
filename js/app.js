@@ -67,8 +67,6 @@ var player2Array = [];
 
 $(function() {
 
-
-
 	function populate1() {
 		for (var i = 101; i < 126; i++) {
 			var rand = chooseRandomCharacter();
@@ -85,7 +83,6 @@ $(function() {
 		}
 
 	}
-
 
 
 	function populate2() {
@@ -107,8 +104,26 @@ $(function() {
 	}
 
 	
+	function populate() {
+		populate1();
+
+		populate2();
+
+		if (($('.p1target').css('background-image')) == ($('.p2target').css('background-image'))) {
+			populate2();
+		}
+	}
 
 
+	$('#start').click(function() {
+		$('#start').css('display', 'none');
+		playerOneTurn = true;
+		$('#player1-plate').toggle();
+		populate();
+		$('#gb1').toggle();
+		$('#gb2').toggle();
+	});
+	
 
 	$('.container').hover(function() {
 		$(this).find('.overlay').fadeIn(300);
@@ -209,25 +224,9 @@ $(function() {
 
 
 
-	function populate() {
-		populate1();
-
-		populate2();
-
-		if (($('.p1target').css('background-image')) == ($('.p2target').css('background-image'))) {
-			populate2();
-		}
-	}
 
 
-	$('#start').click(function() {
-		$('#start').css('display', 'none');
-		playerOneTurn = true;
-		$('#player1-plate').toggle();
-		populate();
-		$('#gb1').toggle();
-		$('#gb2').toggle();
-	});
+
 
 
 	function switchTurn() {
