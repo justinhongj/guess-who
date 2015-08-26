@@ -112,7 +112,7 @@ $(function() {
 		populate2();
 
 		if (($('.p1target').css('background-image')) == ($('.p2target').css('background-image'))) {
-			populate2;
+			populate2();
 		}
 	}
 
@@ -160,7 +160,63 @@ $(function() {
 	});
 
 
-	
+	function checkBoard2(e) {
+		console.log(e.target);
+		if (e.target.innerHTML == ($('#b225').innerHTML || 
+			$('#c225').innerHTML || 
+			$('#d225').innerHTML || 
+			$('#e225').innerHTML || 
+			$('#f225').innerHTML || 
+			$('#g225').innerHTML)) {
+			for (var i = 201; i < 225; i++) {
+				if (!(e.target.innerHTML == ($('#b' + i).innerHTML || 
+					$('#c' + i).innerHTML || 
+					$('#d' + i).innerHTML || 
+					$('#e' + i).innerHTML || 
+					$('#f' + i).innerHTML || 
+					$('#g' + i).innerHTML))) {
+					$('#' + (i - 100)).css('opacity', '0.1');
+				}
+			}
+		} else {
+			for (var x = 201; x < 225; x++) {
+				if (e.target.innerHTML == ($('#b' + x).innerHTML || 
+					$('#c' + x).innerHTML || 
+					$('#d' + x).innerHTML || 
+					$('#e' + x).innerHTML || 
+					$('#f' + x).innerHTML || 
+					$('#g' + x).innerHTML)) {
+					$('#' + (x - 100)).css('opacity', '0.1');
+				}
+			}
+		}
+	}
+
+
+	function checkBoard1(e) {
+		if (e.target == ('#b125' || '#c125' || '#d125' || '#e125' || '#f125' || '#g125')) {
+			for (var i = 101; i < 125; i++) {
+				if (!(e.target == ('#b' + i || '#c' + i || '#d' + i || '#e' + i || '#f' + i || '#g' + i))) {
+					$('#' + (i + 100)).css('opacity', '0.1');
+				}
+			}
+		} else {
+			for (var x = 101; x < 125; x++) {
+				if (e.target == ('#b' + x || '#c' + x || '#d' + x || '#e' + x || '#f' + x || '#g' + x)) {
+					$('#' + (x + 100)).css('opacity', '0.1');
+				}
+			}
+		}
+	}
+
+
+	$('#gb1').find('.traits').click(function() {
+		checkBoard2(event);
+	});
+
+	$('#gb2').find('.traits').click(function() {
+		checkBoard1(event);
+	});
 
 });
 
