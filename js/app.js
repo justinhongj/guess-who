@@ -89,6 +89,7 @@ $(function() {
 			$('#e' + i).html(rand.facialHair);
 			$('#f' + i).html(rand.shirt);
 			$('#g' + i).html(rand.outerwear);
+			$('#p2w').css('background-image', 'url(' + rand.location + ')');
 		}
 
 	}
@@ -107,7 +108,7 @@ $(function() {
 			$('#e' + x).html(rand.facialHair);
 			$('#f' + x).html(rand.shirt);
 			$('#g' + x).html(rand.outerwear);
-
+			$('#p1w').css('background-image', 'url(' + rand.location + ')');
 		}
 
 	}

@@ -96,6 +96,40 @@ header {
 	display: none;
 }
 
+#player1-win {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: #0055A2;
+	display: none;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 3em;
+}
+
+#player2-win {
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: #9E2421;
+	display: none;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 3em;
+}
+
+#p1w, #p2w {
+	height: 200px;
+	width: 150px;
+	margin: 20px auto;
+}
+
 .gameboard {
 	text-align: center;
 	margin-top: 25px;
