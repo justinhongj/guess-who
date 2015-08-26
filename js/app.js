@@ -123,22 +123,6 @@ $(function() {
 	});
 
 
-	function switchTurn() {
-		$('#gb1').toggle();
-		$('#gb2').toggle();
-
-		if (playerOneTurn === true) {
-			playerOneTurn = false;
-		} else {
-			playerOneTurn = true;
-		}		
-	}
-
-
-	$('.guesswho').click(function(){
-		switchTurn();
-	})
-
 
 	$('.container').hover(function() {
 		$(this).find('.overlay').fadeIn(300);
@@ -163,20 +147,20 @@ $(function() {
 
 
 	function checkBoard2(e) {
-		var targetTrait = e.target.innerHTML;
-		if ((targetTrait === $('#b225')[0].innerHTML) || 
-									(targetTrait === $('#c225')[0].innerHTML) || 
-									(targetTrait === $('#d225')[0].innerHTML) || 
-									(targetTrait === $('#e225')[0].innerHTML) || 
-									(targetTrait === $('#f225')[0].innerHTML) || 
-									(targetTrait === $('#g225')[0].innerHTML)) {
+		var selectedTrait = e.target.innerHTML;
+		if ((selectedTrait === $('#b225')[0].innerHTML) || 
+									(selectedTrait === $('#c225')[0].innerHTML) || 
+									(selectedTrait === $('#d225')[0].innerHTML) || 
+									(selectedTrait === $('#e225')[0].innerHTML) || 
+									(selectedTrait === $('#f225')[0].innerHTML) || 
+									(selectedTrait === $('#g225')[0].innerHTML)) {
 			for (var i = 101; i < 125; i++) {
-				if (!((targetTrait === $('#b' + i)[0].innerHTML) || 
-											  (targetTrait === $('#c' + i)[0].innerHTML) || 
-											  (targetTrait === $('#d' + i)[0].innerHTML) || 
-											  (targetTrait === $('#e' + i)[0].innerHTML) || 
-											  (targetTrait === $('#f' + i)[0].innerHTML) || 
-											  (targetTrait === $('#g' + i)[0].innerHTML))) {
+				if (!((selectedTrait === $('#b' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#c' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#d' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#e' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#f' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#g' + i)[0].innerHTML))) {
 					$('#' + i).css({
 						'opacity': '0.1'
 					});
@@ -184,12 +168,12 @@ $(function() {
 			}
 		} else {
 			for (var x = 101; x < 125; x++) {
-				if ((targetTrait === $('#b' + x)[0].innerHTML) || 
-											(targetTrait === $('#c' + x)[0].innerHTML) || 
-											(targetTrait === $('#d' + x)[0].innerHTML) || 
-											(targetTrait === $('#e' + x)[0].innerHTML) || 
-											(targetTrait === $('#f' + x)[0].innerHTML) || 
-											(targetTrait === $('#g' + x)[0].innerHTML)) {
+				if ((selectedTrait === $('#b' + x)[0].innerHTML) || 
+											(selectedTrait === $('#c' + x)[0].innerHTML) || 
+											(selectedTrait === $('#d' + x)[0].innerHTML) || 
+											(selectedTrait === $('#e' + x)[0].innerHTML) || 
+											(selectedTrait === $('#f' + x)[0].innerHTML) || 
+											(selectedTrait === $('#g' + x)[0].innerHTML)) {
 					$('#' + x).css({
 						'opacity': '0.1'
 					});
@@ -200,20 +184,20 @@ $(function() {
 
 
 	function checkBoard1(e) {
-		var targetTrait = e.target.innerHTML;
-		if ((targetTrait === $('#b125')[0].innerHTML) || 
-									(targetTrait === $('#c125')[0].innerHTML) || 
-									(targetTrait === $('#d125')[0].innerHTML) || 
-									(targetTrait === $('#e125')[0].innerHTML) || 
-									(targetTrait === $('#f125')[0].innerHTML) || 
-									(targetTrait === $('#g125')[0].innerHTML)) {
+		var selectedTrait = e.target.innerHTML;
+		if ((selectedTrait === $('#b125')[0].innerHTML) || 
+									(selectedTrait === $('#c125')[0].innerHTML) || 
+									(selectedTrait === $('#d125')[0].innerHTML) || 
+									(selectedTrait === $('#e125')[0].innerHTML) || 
+									(selectedTrait === $('#f125')[0].innerHTML) || 
+									(selectedTrait === $('#g125')[0].innerHTML)) {
 			for (var i = 201; i < 225; i++) {
-				if (!((targetTrait === $('#b' + i)[0].innerHTML) || 
-											  (targetTrait === $('#c' + i)[0].innerHTML) || 
-											  (targetTrait === $('#d' + i)[0].innerHTML) || 
-											  (targetTrait === $('#e' + i)[0].innerHTML) || 
-											  (targetTrait === $('#f' + i)[0].innerHTML) || 
-											  (targetTrait === $('#g' + i)[0].innerHTML))) {
+				if (!((selectedTrait === $('#b' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#c' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#d' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#e' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#f' + i)[0].innerHTML) || 
+											  (selectedTrait === $('#g' + i)[0].innerHTML))) {
 					$('#' + i).css({
 						'opacity': '0.1'
 					});
@@ -221,12 +205,12 @@ $(function() {
 			}
 		} else {
 			for (var x = 201; x < 225; x++) {
-				if ((targetTrait === $('#b' + x)[0].innerHTML) || 
-											(targetTrait === $('#c' + x)[0].innerHTML) || 
-											(targetTrait === $('#d' + x)[0].innerHTML) || 
-											(targetTrait === $('#e' + x)[0].innerHTML) || 
-											(targetTrait === $('#f' + x)[0].innerHTML) || 
-											(targetTrait === $('#g' + x)[0].innerHTML)) {
+				if ((selectedTrait === $('#b' + x)[0].innerHTML) || 
+											(selectedTrait === $('#c' + x)[0].innerHTML) || 
+											(selectedTrait === $('#d' + x)[0].innerHTML) || 
+											(selectedTrait === $('#e' + x)[0].innerHTML) || 
+											(selectedTrait === $('#f' + x)[0].innerHTML) || 
+											(selectedTrait === $('#g' + x)[0].innerHTML)) {
 					$('#' + x).css({
 						'opacity': '0.1'
 					});
@@ -234,48 +218,28 @@ $(function() {
 			}
 		}
 	}
-	// function checkBoard1(e) {
-	// 	if (e.target.innerHTML === ($('#b125')[0].innerHTML || 
-	// 								$('#c125')[0].innerHTML || 
-	// 								$('#d125')[0].innerHTML || 
-	// 								$('#e125')[0].innerHTML || 
-	// 								$('#f125')[0].innerHTML || 
-	// 								$('#g125')[0].innerHTML)) {
-	// 		for (var i = 201; i < 225; i++) {
-	// 			if (!(e.target.innerHTML === ($('#b' + i)[0].innerHTML || 
-	// 										  $('#c' + i)[0].innerHTML || 
-	// 										  $('#d' + i)[0].innerHTML || 
-	// 										  $('#e' + i)[0].innerHTML || 
-	// 										  $('#f' + i)[0].innerHTML || 
-	// 										  $('#g' + i)[0].innerHTML))) {
-	// 				$('#' + i).css({
-	// 					'opacity': '0.1'
-	// 				});
-	// 			}
-	// 		}
-	// 	} else {
-	// 		for (var x = 201; x < 225; x++) {
-	// 			if (e.target.innerHTML === ($('#b' + x)[0].innerHTML || 
-	// 										$('#c' + x)[0].innerHTML || 
-	// 										$('#d' + x)[0].innerHTML || 
-	// 										$('#e' + x)[0].innerHTML || 
-	// 										$('#f' + x)[0].innerHTML || 
-	// 										$('#g' + x)[0].innerHTML)) {
-	// 				$('#' + x).css({
-	// 					'opacity': '0.1'
-	// 				});
-	// 			}
-	// 		}
-	// 	}
-	// }
+
+
+	function switchTurn() {
+		$('#gb1').toggle();
+		$('#gb2').toggle();
+
+		if (playerOneTurn === true) {
+			playerOneTurn = false;
+		} else {
+			playerOneTurn = true;
+		}		
+	}
 
 
 	$('#gb1').find('.traits').click(function() {
 		checkBoard2(event);
+		switchTurn();
 	});
 
 	$('#gb2').find('.traits').click(function() {
 		checkBoard1(event);
+		switchTurn();
 	});
 
 });
