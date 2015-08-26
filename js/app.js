@@ -162,31 +162,33 @@ $(function() {
 
 	function checkBoard2(e) {
 		console.log(e.target);
-		if (e.target.innerHTML == ($('#b225').innerHTML || 
-			$('#c225').innerHTML || 
-			$('#d225').innerHTML || 
-			$('#e225').innerHTML || 
-			$('#f225').innerHTML || 
-			$('#g225').innerHTML)) {
-			for (var i = 201; i < 225; i++) {
-				if (!(e.target.innerHTML == ($('#b' + i).innerHTML || 
-					$('#c' + i).innerHTML || 
-					$('#d' + i).innerHTML || 
-					$('#e' + i).innerHTML || 
-					$('#f' + i).innerHTML || 
-					$('#g' + i).innerHTML))) {
-					$('#' + (i - 100)).css('opacity', '0.1');
+		console.log(e.target.innerHTML);
+		console.log($('#b201')[0].innerHTML);
+		if (e.target.innerHTML == ($('#b225')[0].innerHTML || 
+			$('#c225')[0].innerHTML || 
+			$('#d225')[0].innerHTML || 
+			$('#e225')[0].innerHTML || 
+			$('#f225')[0].innerHTML || 
+			$('#g225')[0].innerHTML)) {
+			for (var i = 101; i < 125; i++) {
+				if (!(e.target.innerHTML == ($('#b' + i)[0].innerHTML || 
+					$('#c' + i)[0].innerHTML || 
+					$('#d' + i)[0].innerHTML || 
+					$('#e' + i)[0].innerHTML || 
+					$('#f' + i)[0].innerHTML || 
+					$('#g' + i)[0].innerHTML))) {
+					$('#' + i).css('opacity', '0.1');
 				}
 			}
 		} else {
-			for (var x = 201; x < 225; x++) {
-				if (e.target.innerHTML == ($('#b' + x).innerHTML || 
-					$('#c' + x).innerHTML || 
-					$('#d' + x).innerHTML || 
-					$('#e' + x).innerHTML || 
-					$('#f' + x).innerHTML || 
-					$('#g' + x).innerHTML)) {
-					$('#' + (x - 100)).css('opacity', '0.1');
+			for (var x = 101; x < 125; x++) {
+				if (e.target.innerHTML == ($('#b' + x)[0].innerHTML || 
+					$('#c' + x)[0].innerHTML || 
+					$('#d' + x)[0].innerHTML || 
+					$('#e' + x)[0].innerHTML || 
+					$('#f' + x)[0].innerHTML || 
+					$('#g' + x)[0].innerHTML)) {
+					$('#' + x).css('opacity', '0.1');
 				}
 			}
 		}

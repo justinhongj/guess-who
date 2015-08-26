@@ -19,6 +19,14 @@ header {
 	margin-top: 25px;
 }
 
+#gb1 .cards {
+	border: 2px solid blue;
+}
+
+#gb2 .cards {
+	border: 2px solid red;
+}
+
 .container {
 	display: inline-block;
 	width: 90px;
