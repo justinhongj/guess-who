@@ -160,35 +160,23 @@ $(function() {
 	});
 
 
+
+
 	function checkBoard2(e) {
-		console.log(e.target);
-		console.log(e.target.innerHTML);
-		console.log($('#b201')[0].innerHTML);
-		if (e.target.innerHTML == ($('#b225')[0].innerHTML || 
-			$('#c225')[0].innerHTML || 
-			$('#d225')[0].innerHTML || 
-			$('#e225')[0].innerHTML || 
-			$('#f225')[0].innerHTML || 
-			$('#g225')[0].innerHTML)) {
+		if (e.target.innerHTML === ($('#b225')[0].innerHTML || $('#c225')[0].innerHTML || $('#d225')[0].innerHTML || $('#e225')[0].innerHTML || $('#f225')[0].innerHTML || $('#g225')[0].innerHTML)) {
 			for (var i = 101; i < 125; i++) {
-				if (!(e.target.innerHTML == ($('#b' + i)[0].innerHTML || 
-					$('#c' + i)[0].innerHTML || 
-					$('#d' + i)[0].innerHTML || 
-					$('#e' + i)[0].innerHTML || 
-					$('#f' + i)[0].innerHTML || 
-					$('#g' + i)[0].innerHTML))) {
-					$('#' + i).css('opacity', '0.1');
+				if (!(e.target.innerHTML === ($('#b' + i)[0].innerHTML || $('#c' + i)[0].innerHTML || $('#d' + i)[0].innerHTML || $('#e' + i)[0].innerHTML || $('#f' + i)[0].innerHTML || $('#g' + i)[0].innerHTML))) {
+					$('#' + i).css({
+						'opacity': '0.1'
+						});
 				}
 			}
 		} else {
 			for (var x = 101; x < 125; x++) {
-				if (e.target.innerHTML == ($('#b' + x)[0].innerHTML || 
-					$('#c' + x)[0].innerHTML || 
-					$('#d' + x)[0].innerHTML || 
-					$('#e' + x)[0].innerHTML || 
-					$('#f' + x)[0].innerHTML || 
-					$('#g' + x)[0].innerHTML)) {
-					$('#' + x).css('opacity', '0.1');
+				if (e.target.innerHTML === ($('#b' + x)[0].innerHTML || $('#c' + x)[0].innerHTML || $('#d' + x)[0].innerHTML || $('#e' + x)[0].innerHTML || $('#f' + x)[0].innerHTML || $('#g' + x)[0].innerHTML)) {
+					$('#' + x).css({
+						'opacity': '0.1'
+					});
 				}
 			}
 		}
@@ -196,16 +184,20 @@ $(function() {
 
 
 	function checkBoard1(e) {
-		if (e.target == ('#b125' || '#c125' || '#d125' || '#e125' || '#f125' || '#g125')) {
-			for (var i = 101; i < 125; i++) {
-				if (!(e.target == ('#b' + i || '#c' + i || '#d' + i || '#e' + i || '#f' + i || '#g' + i))) {
-					$('#' + (i + 100)).css('opacity', '0.1');
+		if (e.target.innerHTML === ($('#b125')[0].innerHTML || $('#c125')[0].innerHTML || $('#d125')[0].innerHTML || $('#e125')[0].innerHTML || $('#f125')[0].innerHTML || $('#g125')[0].innerHTML)) {
+			for (var i = 201; i < 225; i++) {
+				if (!(e.target.innerHTML === ($('#b' + i)[0].innerHTML || $('#c' + i)[0].innerHTML || $('#d' + i)[0].innerHTML || $('#e' + i)[0].innerHTML || $('#f' + i)[0].innerHTML || $('#g' + i)[0].innerHTML))) {
+					$('#' + i).css({
+						'opacity': '0.1'
+					});
 				}
 			}
 		} else {
-			for (var x = 101; x < 125; x++) {
-				if (e.target == ('#b' + x || '#c' + x || '#d' + x || '#e' + x || '#f' + x || '#g' + x)) {
-					$('#' + (x + 100)).css('opacity', '0.1');
+			for (var x = 201; x < 225; x++) {
+				if (e.target.innerHTML === ($('#b' + x)[0].innerHTML || $('#c' + x)[0].innerHTML || $('#d' + x)[0].innerHTML || $('#e' + x)[0].innerHTML || $('#f' + x)[0].innerHTML || $('#g' + x)[0].innerHTML)) {
+					$('#' + x).css({
+						'opacity': '0.1'
+					});
 				}
 			}
 		}
