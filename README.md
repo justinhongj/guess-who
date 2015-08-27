@@ -2,7 +2,7 @@
 GA-WDI Project #1
 
 
-Instructions:
+# Instructions:
 
 When the page loads, each player will be prompted to choose a character.
 There are a total of 25 characters, which will be randomly placed on each board.
@@ -18,13 +18,13 @@ If the player guessed incorrectly, they forfeit their turn.
 
 
 
-Technologies used:
+# Technologies used:
 
 The gamebaord was constructed using HTML, and styled using CSS. 
 The logic and functionality of the game was created using Javascript and Jquery.
 
 
-Approach:
+# Approach:
 
 Each of the 25 characters is an object, created using a function constructor.
 Each object contains the name, traits, and image file location of each character.
@@ -35,7 +35,7 @@ These event listeners triggered functions to compare the traits of the chosen ch
 The win logic is simply this, 'if an event listener is triggered by the name of a character object, and that name matches the name of the targect character object, the player that triggered the event wins the round'
 
 
-Future changes:
+# Future changes:
 
 The ability for each player to view their chosen character.
 A history of all the traits selected by each player per round.
