@@ -39,8 +39,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: grey;
-	background: rgba(80, 80, 80, 0.8);
+	background: rgba(0, 85, 162, 0.8);
 	display: block;
 	color: white;
 	font-family: Arial;
@@ -55,8 +54,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: grey;
-	background: rgba(80, 80, 80, 0.8);
+	background: rgba(158, 36, 33, 0.8);
 	display: none;
 	color: white;
 	font-family: Arial;
@@ -106,7 +104,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background: rgba(80, 80, 80, 0.1);
+	background: rgba(80, 80, 80, 0.2);
 	display: none;
 	color: rgb(50, 50, 50);
 	font-family: Arial;
@@ -135,7 +133,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background: rgba(80, 80, 80, 0.1);
+	background: rgba(80, 80, 80, 0.2);
 	display: none;
 	color: rgb(50, 50, 50);
 	font-family: Arial;
@@ -155,6 +153,7 @@ header {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 3em;
+	padding-top: 50px;
 }
 
 #player2-win {
@@ -169,6 +168,7 @@ header {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 3em;
+	padding-top: 50px;
 }
 
 #p1w, #p2w {

@@ -71,6 +71,7 @@ function chooseRandomCharacter() {
 var playerOneTurn = null;
 
 
+
 $(function() {
 
 	// functions to populate the board(each card) using the chooseRandomCharacter function above
@@ -225,6 +226,7 @@ $(function() {
 		populate();
 		$('#gb1').toggle();
 		$('#gb2').toggle();
+		$('.cards').css('opacity', '1');
 	});
 	
 
@@ -279,6 +281,7 @@ $(function() {
 		if (selectedTrait === $('#a226')[0].innerHTML) {
 			$('player1-end-plate').toggle();
 			$('#player1-win').toggle();
+			$('#score1')[0].innerHTML = Number($('#score1')[0].innerHTML) + 1;
 			return console.log('Player 1 Wins!!!');
 		}
 
@@ -332,6 +335,7 @@ $(function() {
 		if (selectedTrait === $('#a126')[0].innerHTML) {
 			$('#player2-end-plate').toggle();
 			$('#player2-win').toggle();
+			$('#score2')[0].innerHTML = Number($('#score2')[0].innerHTML) + 1;
 			return console.log('Player 2 Wins!!!');
 		}
 
