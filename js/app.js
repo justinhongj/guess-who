@@ -164,10 +164,27 @@ $(function() {
 	});
 
 
+	$('.name').hover(function(event) {
+		$(event.target).css({
+			'color': 'yellow'
+		});
+	}, function() {
+		$(event.target).css({
+			'color': 'white'
+		});
+	});
+
+
 	// functions to eliminate the correct cards based on the selected trait, and how that relates to the target's traits
 	// the event listener that executes this function is written below
 	function checkBoard2(e) {
 		var selectedTrait = e.target.innerHTML;
+
+		if (selectedTrait === $('#a225')[0].innerHTML) {
+			$('player1-end-plate').toggle();
+			$('#player1-win').toggle();
+			return console.log('Player 1 Wins!!!');
+		}
 
 		// compares the selected trait to all the traits of the opponenet's target
 		// apparently, when calling an element by ID, this function returned a single item array, hence the [0]
@@ -215,6 +232,12 @@ $(function() {
 
 	function checkBoard1(e) {
 		var selectedTrait = e.target.innerHTML;
+
+		if (selectedTrait === $('#a125')[0].innerHTML) {
+			$('#player2-end-plate').toggle();
+			$('#player2-win').toggle();
+			return console.log('Player 2 Wins!!!');
+		}
 
 		if ((selectedTrait === $('#b125')[0].innerHTML) || 
 									(selectedTrait === $('#c125')[0].innerHTML) || 
@@ -298,6 +321,18 @@ $(function() {
 	});
 
 	$('#gb2').find('.traits').click(function() {
+		checkBoard1(event);
+		switchTurn();
+	});
+
+
+	//
+	$('#gb1').find('.name').click(function() {
+		checkBoard2(event);
+		switchTurn();
+	})
+
+	$('#gb2').find('.name').click(function() {
 		checkBoard1(event);
 		switchTurn();
 	});

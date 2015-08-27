@@ -46,6 +46,7 @@ header {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 5em;
+	padding-top: 165px;
 }
 
 #player1-plate {
@@ -60,6 +61,7 @@ header {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 3em;
+	padding-top: 75px;
 }
 
 #player1-end-plate {
@@ -84,6 +86,7 @@ header {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 3em;
+	padding-top: 75px;
 }
 
 #player2-end-plate {
