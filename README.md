@@ -31,23 +31,33 @@ If the player guessed incorrectly, they forfeit their turn.
 # Technologies used:
 
 The gamebaord was constructed using HTML, and styled using CSS. 
+
 The logic and functionality of the game was created using Javascript and Jquery.
 
 
 # Approach:
 
 Each of the 25 characters is an object, created using a function constructor.
+
 Each object contains the name, traits, and image file location of each character.
+
 A randomizer function was created in Javascript to return a random character object.
+
 The name, traits, and image file location of each character object are assigned to divs in the HTML.
+
 Event listeners were assigned to each div and wipe page.
+
 These event listeners triggered functions to compare the traits of the chosen character object to the traits of the target character object.
+
 The win logic is simply this, 'if an event listener is triggered by the name of a character object, and that name matches the name of the targect character object, the player that triggered the event wins the round'
 
 
 # Future changes:
 
 The ability for each player to view their chosen character.
+
 A history of all the traits selected by each player per round.
+
 A history of all the incorrect guesses made by each player per round.
+
 Style changes, to make the UI more appealing.
