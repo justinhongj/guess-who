@@ -73,8 +73,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: grey;
-	background: rgba(80, 80, 80, 1);
+	background-color: rgb(60, 60, 60);
 	display: block;
 	color: white;
 	font-family: Arial;
@@ -89,7 +88,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: #0055A2;
+	background: rgba(0, 85, 162, 0.8);
 	display: none;
 	color: white;
 	font-family: Arial;
@@ -118,7 +117,7 @@ header {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background-color: #9E2421;
+	background: rgba(158, 36, 33, 0.8);
 	display: none;
 	color: white;
 	font-family: Arial;
