@@ -5,15 +5,25 @@ GA-WDI Project #1
 # Instructions:
 
 When the page loads, each player will be prompted to choose a character.
+
 There are a total of 25 characters, which will be randomly placed on each board.
+
 Once each player has chosen their characters, they will then attempt to guess which character the other player chose.
+
 This is done through deduction.
+
 Each player, on their turn, can hover over any character, and see a list of the traits that character has.
+
 Clicking on a trait will compare that trait with the opposing player's character.
+
 If the selected trait matches a trait possessed by the other player's character, all characters not possessing that trait will be discarded.
+
 Inversely, if the selected trait does not match any of the traits of the other player's character, all characters possessing that trait will be discarded.
+
 Once a player is certain that they know which character the other player has chosen, they may make a guess by clicking on a character's name.
+
 If the player guessed correctly, they win the round.
+
 If the player guessed incorrectly, they forfeit their turn.
 
 
