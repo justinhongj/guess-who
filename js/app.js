@@ -76,6 +76,48 @@ $(function() {
 	// functions to populate the board(each card) using the chooseRandomCharacter function above
 	// each of the character objects property values are stored in the class "traits", each with a unique ID
 	// the IDs are determined by which trait is being stored in which card
+	function populate0() {
+		for (var i = 1; i < 26; i++) {
+			var rand = chooseRandomCharacter();
+
+			$('#' + i).css('background-image', 'url(' + rand.location + ')');
+
+			$('#a' + i).html(rand.name);
+			$('#b' + i).html(rand.sex);
+			$('#c' + i).html(rand.hair);
+			$('#d' + i).html(rand.glasses);
+			$('#e' + i).html(rand.facialHair);
+			$('#f' + i).html(rand.shirt);
+			$('#g' + i).html(rand.outerwear);
+
+		}
+
+	}
+
+	$('#player1-select').click(function() {
+		$('#player1-select').toggle();
+		populate0();
+	})
+
+	$('#select1').find('.cards').click(function(event) {
+		// $(event.target).css('background-image')
+		// console.log($(event.target).siblings().find('.name')[0].innerHTML);
+
+		$('#126').css('background-image', $(event.target).css('background-image'));
+		$('#a126').html($(event.target).siblings().find('.name')[0].innerHTML);
+		$('#b126').html($(event.target).siblings().find('.sex')[0].innerHTML);
+		$('#c126').html($(event.target).siblings().find('.hair')[0].innerHTML);
+		$('#d126').html($(event.target).siblings().find('.glasses')[0].innerHTML);
+		$('#e126').html($(event.target).siblings().find('.facialHair')[0].innerHTML);
+		$('#f126').html($(event.target).siblings().find('.shirt')[0].innerHTML);
+		$('#g126').html($(event.target).siblings().find('.outerwear')[0].innerHTML);
+
+		$('#p2w').css('background-image', $(event.target).css('background-image'));
+
+		$('#select1').css('display', 'none');
+	})
+
+
 	function populate1() {
 		for (var i = 101; i < 126; i++) {
 			var rand = chooseRandomCharacter();
@@ -89,10 +131,12 @@ $(function() {
 			$('#e' + i).html(rand.facialHair);
 			$('#f' + i).html(rand.shirt);
 			$('#g' + i).html(rand.outerwear);
-			$('#p2w').css('background-image', 'url(' + rand.location + ')');
+
 		}
 
 	}
+			// move this to player select
+			// $('#p2w').css('background-image', 'url(' + rand.location + ')');
 
 
 	function populate2() {
@@ -108,6 +152,8 @@ $(function() {
 			$('#e' + x).html(rand.facialHair);
 			$('#f' + x).html(rand.shirt);
 			$('#g' + x).html(rand.outerwear);
+
+			// move this to player select
 			$('#p1w').css('background-image', 'url(' + rand.location + ')');
 		}
 
