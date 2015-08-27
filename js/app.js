@@ -114,8 +114,53 @@ $(function() {
 
 		$('#p2w').css('background-image', $(event.target).css('background-image'));
 
-		$('#select1').css('display', 'none');
+		$('#select1').toggle();
+		$('#player2-select').toggle();
 	})
+
+
+	function populate00() {
+		for (var i = 51; i < 76; i++) {
+			var rand = chooseRandomCharacter();
+
+			$('#' + i).css('background-image', 'url(' + rand.location + ')');
+
+			$('#a' + i).html(rand.name);
+			$('#b' + i).html(rand.sex);
+			$('#c' + i).html(rand.hair);
+			$('#d' + i).html(rand.glasses);
+			$('#e' + i).html(rand.facialHair);
+			$('#f' + i).html(rand.shirt);
+			$('#g' + i).html(rand.outerwear);
+
+		}
+
+	}
+
+
+	$('#player2-select').click(function() {
+		$('#player2-select').toggle();
+		populate00();
+	})
+
+	$('#select2').find('.cards').click(function(event) {
+
+		$('#226').css('background-image', $(event.target).css('background-image'));
+		$('#a226').html($(event.target).siblings().find('.name')[0].innerHTML);
+		$('#b226').html($(event.target).siblings().find('.sex')[0].innerHTML);
+		$('#c226').html($(event.target).siblings().find('.hair')[0].innerHTML);
+		$('#d226').html($(event.target).siblings().find('.glasses')[0].innerHTML);
+		$('#e226').html($(event.target).siblings().find('.facialHair')[0].innerHTML);
+		$('#f226').html($(event.target).siblings().find('.shirt')[0].innerHTML);
+		$('#g226').html($(event.target).siblings().find('.outerwear')[0].innerHTML);
+
+		$('#p1w').css('background-image', $(event.target).css('background-image'));
+
+		$('#select2').toggle();
+
+		$('#gb2').toggle();
+	})
+
 
 
 	function populate1() {
@@ -153,8 +198,6 @@ $(function() {
 			$('#f' + x).html(rand.shirt);
 			$('#g' + x).html(rand.outerwear);
 
-			// move this to player select
-			$('#p1w').css('background-image', 'url(' + rand.location + ')');
 		}
 
 	}
@@ -226,7 +269,7 @@ $(function() {
 	function checkBoard2(e) {
 		var selectedTrait = e.target.innerHTML;
 
-		if (selectedTrait === $('#a225')[0].innerHTML) {
+		if (selectedTrait === $('#a226')[0].innerHTML) {
 			$('player1-end-plate').toggle();
 			$('#player1-win').toggle();
 			return console.log('Player 1 Wins!!!');
@@ -234,18 +277,18 @@ $(function() {
 
 		// compares the selected trait to all the traits of the opponenet's target
 		// apparently, when calling an element by ID, this function returned a single item array, hence the [0]
-		if ((selectedTrait === $('#b225')[0].innerHTML) || 
-									(selectedTrait === $('#c225')[0].innerHTML) || 
-									(selectedTrait === $('#d225')[0].innerHTML) || 
-									(selectedTrait === $('#e225')[0].innerHTML) || 
-									(selectedTrait === $('#f225')[0].innerHTML) || 
-									(selectedTrait === $('#g225')[0].innerHTML)) {
+		if ((selectedTrait === $('#b226')[0].innerHTML) || 
+									(selectedTrait === $('#c226')[0].innerHTML) || 
+									(selectedTrait === $('#d226')[0].innerHTML) || 
+									(selectedTrait === $('#e226')[0].innerHTML) || 
+									(selectedTrait === $('#f226')[0].innerHTML) || 
+									(selectedTrait === $('#g226')[0].innerHTML)) {
 
 			// on a match, all cards which do not possess that trait are discarded
 			// discarded cards' opacity is changed to 0.1, allowing the player to keep track of which cards were discarded
 			// this is done by iterating through every trait on a give card and searching for a match
 			// the variables in the loop are set to match the unique IDs of each trait on each card
-			for (var i = 101; i < 125; i++) {
+			for (var i = 101; i < 126; i++) {
 				if (!((selectedTrait === $('#b' + i)[0].innerHTML) || 
 											  (selectedTrait === $('#c' + i)[0].innerHTML) || 
 											  (selectedTrait === $('#d' + i)[0].innerHTML) || 
@@ -260,7 +303,7 @@ $(function() {
 		} else {
 
 			// if the selected trait does not match any of the target's traits, all cards possessing the selected trait are discarded
-			for (var x = 101; x < 125; x++) {
+			for (var x = 101; x < 126; x++) {
 				if ((selectedTrait === $('#b' + x)[0].innerHTML) || 
 											(selectedTrait === $('#c' + x)[0].innerHTML) || 
 											(selectedTrait === $('#d' + x)[0].innerHTML) || 
@@ -279,19 +322,19 @@ $(function() {
 	function checkBoard1(e) {
 		var selectedTrait = e.target.innerHTML;
 
-		if (selectedTrait === $('#a125')[0].innerHTML) {
+		if (selectedTrait === $('#a126')[0].innerHTML) {
 			$('#player2-end-plate').toggle();
 			$('#player2-win').toggle();
 			return console.log('Player 2 Wins!!!');
 		}
 
-		if ((selectedTrait === $('#b125')[0].innerHTML) || 
-									(selectedTrait === $('#c125')[0].innerHTML) || 
-									(selectedTrait === $('#d125')[0].innerHTML) || 
-									(selectedTrait === $('#e125')[0].innerHTML) || 
-									(selectedTrait === $('#f125')[0].innerHTML) || 
-									(selectedTrait === $('#g125')[0].innerHTML)) {
-			for (var i = 201; i < 225; i++) {
+		if ((selectedTrait === $('#b126')[0].innerHTML) || 
+									(selectedTrait === $('#c126')[0].innerHTML) || 
+									(selectedTrait === $('#d126')[0].innerHTML) || 
+									(selectedTrait === $('#e126')[0].innerHTML) || 
+									(selectedTrait === $('#f126')[0].innerHTML) || 
+									(selectedTrait === $('#g126')[0].innerHTML)) {
+			for (var i = 201; i < 226; i++) {
 				if (!((selectedTrait === $('#b' + i)[0].innerHTML) || 
 											  (selectedTrait === $('#c' + i)[0].innerHTML) || 
 											  (selectedTrait === $('#d' + i)[0].innerHTML) || 
@@ -304,7 +347,7 @@ $(function() {
 				}
 			}
 		} else {
-			for (var x = 201; x < 225; x++) {
+			for (var x = 201; x < 226; x++) {
 				if ((selectedTrait === $('#b' + x)[0].innerHTML) || 
 											(selectedTrait === $('#c' + x)[0].innerHTML) || 
 											(selectedTrait === $('#d' + x)[0].innerHTML) || 
