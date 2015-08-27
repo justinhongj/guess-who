@@ -115,6 +115,7 @@ $(function() {
 		$('#p2w').css('background-image', $(event.target).css('background-image'));
 
 		$('#select1').toggle();
+		$('#select2').toggle();
 		$('#player2-select').toggle();
 	})
 
@@ -262,6 +263,12 @@ $(function() {
 			'color': 'white'
 		});
 	});
+
+
+	// changes cursor to 'pointer'/hand when hovered over these elements
+	$('.overlay').css('cursor', 'pointer');
+	$('#select1').find('.cards').css('cursor', 'pointer');
+	$('#select2').find('.cards').css('cursor', 'pointer');
 
 
 	// functions to eliminate the correct cards based on the selected trait, and how that relates to the target's traits
@@ -425,6 +432,36 @@ $(function() {
 		checkBoard1(event);
 		switchTurn();
 	});
+
+
+	//
+	$('#player1-win').click(function() {
+		$('#player1-win').css('display', 'none');
+		$('#player1-select').css('display', 'block');
+		$('#select1').css('display', 'block');
+		$('#start').css('display', 'block');
+		$('#gb1').css('display', 'none');
+		$('#gb2').css('display', 'none');
+		$('#player2-select').css('display', 'none');
+		$('#player1-plate').css('display', 'none');
+		$('#player1-end-plate').css('display', 'none');
+		$('#player2-plate').css('display', 'none');
+		$('#player2-end-plate').css('display', 'none');
+	})
+
+	$('#player2-win').click(function() {
+		$('#player2-win').css('display', 'none');
+		$('#player1-select').css('display', 'block');
+		$('#select1').css('display', 'block');
+		$('#start').css('display', 'block');
+		$('#gb1').css('display', 'none');
+		$('#gb2').css('display', 'none');
+		$('#player2-select').css('display', 'none');
+		$('#player1-plate').css('display', 'none');
+		$('#player1-end-plate').css('display', 'none');
+		$('#player2-plate').css('display', 'none');
+		$('#player2-end-plate').css('display', 'none');
+	})
 
 });
 
