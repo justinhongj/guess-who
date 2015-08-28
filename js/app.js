@@ -451,6 +451,7 @@ $(function() {
 		$('#player1-end-plate').css('display', 'none');
 		$('#player2-plate').css('display', 'none');
 		$('#player2-end-plate').css('display', 'none');
+		$('.cards').css ('background-image', 'none');
 	})
 
 	$('#player2-win').click(function() {
@@ -465,6 +466,7 @@ $(function() {
 		$('#player1-end-plate').css('display', 'none');
 		$('#player2-plate').css('display', 'none');
 		$('#player2-end-plate').css('display', 'none');
+		$('.cards').css ('background-image', 'none');
 	})
 
 });
