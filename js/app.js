@@ -100,9 +100,9 @@ $(function() {
 		populate0();
 	})
 
+	// event listener on character select screen
+	// assigns all the attributes of a character to the player's target
 	$('#select1').find('.cards').click(function(event) {
-		// $(event.target).css('background-image')
-		// console.log($(event.target).siblings().find('.name')[0].innerHTML);
 
 		$('#126').css('background-image', $(event.target).css('background-image'));
 		$('#a126').html($(event.target).siblings().find('.name')[0].innerHTML);
@@ -182,9 +182,6 @@ $(function() {
 		}
 
 	}
-			// move this to player select
-			// $('#p2w').css('background-image', 'url(' + rand.location + ')');
-
 
 	function populate2() {
 		for (var x = 201; x < 226; x++) {
@@ -204,26 +201,15 @@ $(function() {
 
 	}
 
-	
-	// function that executes the previous two functions
-	// also does not allow both players to ahve the same target
-	function populate() {
-		populate1();
 
-		populate2();
-
-		if (($('.p1target').css('background-image')) == ($('.p2target').css('background-image'))) {
-			populate2();
-		}
-	}
-
-
-	// event listener for the START! plate shown when the page loads
+	// event listener for the START! page
+	// populates player 1 and 2 boards
 	$('#start').click(function() {
 		$('#start').css('display', 'none');
 		playerOneTurn = true;
 		$('#player1-plate').toggle();
-		populate();
+		populate1();
+		populate2();
 		$('#gb1').toggle();
 		$('#gb2').toggle();
 		$('.cards').css('opacity', '1');
@@ -438,7 +424,8 @@ $(function() {
 	});
 
 
-	//
+	// event listeners for 'win' pages
+	// resets the game
 	$('#player1-win').click(function() {
 		$('#player1-win').css('display', 'none');
 		$('#player1-select').css('display', 'block');
@@ -451,6 +438,7 @@ $(function() {
 		$('#player1-end-plate').css('display', 'none');
 		$('#player2-plate').css('display', 'none');
 		$('#player2-end-plate').css('display', 'none');
+		$('.cards').css('background-image', 'none');
 	})
 
 	$('#player2-win').click(function() {
@@ -465,6 +453,7 @@ $(function() {
 		$('#player1-end-plate').css('display', 'none');
 		$('#player2-plate').css('display', 'none');
 		$('#player2-end-plate').css('display', 'none');
+		$('.cards').css('background-image', 'none');
 	})
 
 });
