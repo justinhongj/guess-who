@@ -54,6 +54,8 @@ The win logic is simply this, 'if an event listener is triggered by the name of 
 
 # Links:
 
+Guess Who: http://justinhongj.github.io/guess-who/guess-who.html
+
 Trello: https://trello.com/b/C0scL9ZH/guess-who-project
 
 
