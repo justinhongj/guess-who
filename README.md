@@ -52,6 +52,11 @@ These event listeners triggered functions to compare the traits of the chosen ch
 The win logic is simply this, 'if an event listener is triggered by the name of a character object, and that name matches the name of the targect character object, the player that triggered the event wins the round'
 
 
+# Links:
+
+Trello: https://trello.com/b/C0scL9ZH/guess-who-project
+
+
 # Future changes:
 
 The ability for each player to view their chosen character.
