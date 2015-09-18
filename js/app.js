@@ -360,6 +360,59 @@ $(function() {
 	}
 
 
+
+	// function checkBoard(e, oppPlayerNum) {
+	// 	var selectedTrait = e.target.innerHTML;
+	// 	var playerNum;
+		
+	// 	if (oppPlayerNum == 1) {
+	// 		playerNum = 2
+	// 	} else {
+	// 		playerNum = 1
+	// 	}
+
+	// 	if (selectedTrait === $('#a' + oppPlayerNum + '26')[0].innerHTML) {
+	// 		$('#player' + playerNum + '-end-plate').toggle();
+	// 		$('#player' + playerNum + '-win').toggle();
+	// 		$('#score' + playerNum + '')[0].innerHTML = Number($('#score' + playerNum + '')[0].innerHTML) + 1;
+	// 		return console.log('Player 2 Wins!!!');
+	// 	}
+
+	// 	if ((selectedTrait === $('#b' + oppPlayerNum + '26')[0].innerHTML) || 
+	// 								(selectedTrait === $('#c' + oppPlayerNum + '26')[0].innerHTML) || 
+	// 								(selectedTrait === $('#d' + oppPlayerNum + '26')[0].innerHTML) || 
+	// 								(selectedTrait === $('#e' + oppPlayerNum + '26')[0].innerHTML) || 
+	// 								(selectedTrait === $('#f' + oppPlayerNum + '26')[0].innerHTML) || 
+	// 								(selectedTrait === $('#g' + oppPlayerNum + '26')[0].innerHTML)) {
+	// 		for (var i = 201; i < 226; i++) {
+	// 			if (!((selectedTrait === $('#b' + i)[0].innerHTML) || 
+	// 										  (selectedTrait === $('#c' + i)[0].innerHTML) || 
+	// 										  (selectedTrait === $('#d' + i)[0].innerHTML) || 
+	// 										  (selectedTrait === $('#e' + i)[0].innerHTML) || 
+	// 										  (selectedTrait === $('#f' + i)[0].innerHTML) || 
+	// 										  (selectedTrait === $('#g' + i)[0].innerHTML))) {
+	// 				$('#' + i).css({
+	// 					'opacity': '0.1'
+	// 				});
+	// 			}
+	// 		}
+	// 	} else {
+	// 		for (var x = 201; x < 226; x++) {
+	// 			if ((selectedTrait === $('#b' + x)[0].innerHTML) || 
+	// 										(selectedTrait === $('#c' + x)[0].innerHTML) || 
+	// 										(selectedTrait === $('#d' + x)[0].innerHTML) || 
+	// 										(selectedTrait === $('#e' + x)[0].innerHTML) || 
+	// 										(selectedTrait === $('#f' + x)[0].innerHTML) || 
+	// 										(selectedTrait === $('#g' + x)[0].innerHTML)) {
+	// 				$('#' + x).css({
+	// 					'opacity': '0.1'
+	// 				});
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+
 	// function used to change the value of 'playerOneTurn'
 	// also used to show the 'end plate' of each player's turn
 	function switchTurn() {
